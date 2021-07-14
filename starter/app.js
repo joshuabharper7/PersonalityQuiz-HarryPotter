@@ -34,7 +34,7 @@ const questions = [
                 point: 'Ron',
             },
             {
-                text: 'I punish them, call them worthless',
+                text: 'I punish them, they are beneath me',
                 point: 'Draco',
             },
         ],
