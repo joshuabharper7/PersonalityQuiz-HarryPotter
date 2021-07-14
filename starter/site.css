@@ -1,15 +1,17 @@
 body {
     font-family: Calibri;
-    background: skyblue;
+    /* background: #740001; */
+    background-size: 100%;
 }
 
 #quizContainer {
     border-width: 5px;
     border-style: solid;
-    border-color: #09f;
+    border-color: #D3A625;
     border-radius: 15px;
     padding: 15px;
-    background: #fff;
+    background: #AE0001;
+    color: #C0C0C0;
 
     min-width: 400px;
     max-width: 800px;
@@ -57,4 +59,16 @@ body {
 
 .hide {
     display: none;
+}
+
+#quizBtn, #takeAgain {
+    color:white;
+    border-radius: 5px;
+    background-color: #333;
+}
+
+#quizBtn:hover, #takeAgain:hover {
+    color: #740001;
+    border-radius: 5px;
+    background-color: white;
 }

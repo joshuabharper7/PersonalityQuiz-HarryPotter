@@ -2,10 +2,10 @@
 // It will be reset each time the quiz starts
 // keys used (hover over, value is number)
 const scoreKeeper = {
-    dog: 0,
-    cat: 0,
-    parrot: 0,
-    turtle: 0,
+    Harry: 0,
+    Hermione: 0,
+    Ron: 0,
+    Draco: 0,
 };
 
 let currentQuestionIndex = 0; // Programming languages start counting at zero
@@ -19,109 +19,214 @@ let currentQuestionIndex = 0; // Programming languages start counting at zero
 // each option is its own object {} with two properties: text and point
 const questions = [
     {
-        text: 'What are you most likely to be doing at a party?',
+        text: 'How do you treat people you don\'t like?',
         options: [
             {
-                text: 'Playing games and making new friends',
-                point: 'dog',
+                text: 'I battle them',
+                point: 'Harry',
             },
             {
-                text: 'Watching from a corner, hoping someone interesting shows up',
-                point: 'cat',
+                text: 'I outwit them',
+                point: 'Hermione',
             },
             {
-                text: 'Partying! Dressed up, chatting it up, dancing... maybe a little loud',
-                point: 'parrot',
+                text: 'I find a way to prank them',
+                point: 'Ron',
             },
             {
-                text: 'I would help set up beforehand and make sure everything goes smoothly',
-                point: 'turtle',
+                text: 'I punish them, call them worthless',
+                point: 'Draco',
             },
         ],
     },
     {
-        text: 'How would you prefer to unwind?',
+        text: 'What would your super power be?',
         options: [
             {
-                text: 'Take a walk outside',
-                point: 'dog',
+                text: 'Mine would be super Intellect of course',
+                point: 'Hermione',
             },
             {
-                text: 'Lie out in the sun',
-                point: 'cat',
+                text: 'Definitely Super Strength',
+                point: 'Ron',
             },
             {
-                text: 'Go window shopping',
-                point: 'parrot',
+                text: 'Mind Control',
+                point: 'Draco',
             },
             {
-                text: 'Sit at home and do nothing',
-                point: 'turtle',
+                text: 'Ability to talk to the dead',
+                point: 'Harry',
             },
         ],
     },
     {
-        text: 'How do you deal with stress?',
+        text: 'How would you help in the fight against the Dark Lord?',
         options: [
             {
-                text: 'Exercise',
-                point: 'dog',
+                text: 'I will take the fight to He-Who-Must-Not-Be-Named',
+                point: 'Ron',
             },
             {
-                text: 'Tell someone off',
-                point: 'cat',
+                text: 'I wont. Don\'t make me choose sides',
+                point: 'Draco',
+            },
+            {
+                text: 'I will start an army and do whatever it takes',
+                point: 'Harry',
+            },
+            {
+                text: 'I will find the Horcruxes and figure out how to destroy them',
+                point: 'Hermione',
+            },
+        ],
+    },
+    {
+        text: 'How do you feel about rules?',
+        options: [
+            {
+                text: 'It\'s ok to break the rules if it\'s for a good cause',
+                point: 'Harry',
+            },
+            {
+                text: 'Rules are important. But if you\'re going to break them, at least be smart about it',
+                point: 'Hermione',
+            },
+            {
+                text: 'Rules are subject to debate',
+                point: 'Ron',
+            },
+            {
+                text: 'If you\'re rich, there aren\'t any rules',
+                point: 'Draco',
+            },
+        ],
+    },
+    {
+        text: 'Where is your favorite place at Hogwarts?',
+        options: [
+            {
+                text: 'The Slytherin Common Room',
+                point: 'Draco',
+            },
+            {
+                text: 'The Room of Requirement',
+                point: 'Harry',
+            },
+            {
+                text: 'The Library',
+                point: 'Hermione',
+            },
+            {
+                text: 'The Quidditch Pitch',
+                point: 'Ron',
+            },
+        ],
+    },
+    {
+        text: 'What is your biggest weakness?',
+        options: [
+            {
+                text: 'Giant Spiders',
+                point: 'Ron',
+            },
+            {
+                text: 'I\'m too smart for my own good',
+                point: 'Hermione',
+            },
+            {
+                text: 'I rush into things without thinking',
+                point: 'Harry',
+            },
+            {
+                text: 'I am too easily influenced',
+                point: 'Draco',
+            },
+        ],
+    },
+    {
+        text: 'What is your relationship with your family like?',
+        options: [
+            {
+                text: 'My parents want the best for me, I think...',
+                point: 'Draco',
+            },
+            {
+                text: 'My parents are great! From what I\'ve heard...',
+                point: 'Harry',
+            },
+            {
+                text: 'I love my parents, They\'re special to me.',
+                point: 'Hermione',
+            },
+            {
+                text: 'Too big! They don\'t notice me.',
+                point: 'Ron',
+            },
+        ],
+    },
+    {
+        text: 'What is your favorite store in Diagon Alley?',
+        options: [
+            {
+                text: 'Weasley\'s Wizard Wheezes',
+                point: 'Ron',
+            },
+            {
+                text: 'Borgin and Burkes',
+                point: 'Draco',
             },
             {
                 // inside a string, you have to escape quote marks with a \
-                text: 'Share how I\'m feeling',
-                point: 'parrot',
+                text: 'Quality Quiddich Supplies',
+                point: 'Harry',
             },
             {
-                text: 'Have some alone time',
-                point: 'turtle',
-            },
-        ],
-    },
-    {
-        text: 'What sounds like the most fun to you?',
-        options: [
-            {
-                text: 'Playing sports or videogames with friends',
-                point: 'dog',
-            },
-            {
-                text: 'Reading a book',
-                point: 'cat',
-            },
-            {
-                text: 'Just hanging out and talking with friends',
-                point: 'parrot',
-            },
-            {
-                text: 'Making things, or cleaning the house',
-                point: 'turtle',
+                text: 'Flourish and Blotts',
+                point: 'Hermione',
             },
         ],
     },
     {
-        text: 'What do you look for in a friend?',
+        text: 'Why are people jealous of you?',
         options: [
             {
-                text: 'Someone who is fun and energetic',
-                point: 'dog',
+                text: 'I am smart and talented',
+                point: 'Hermione',
             },
             {
-                text: 'Someone who can be both quiet and playful',
-                point: 'cat',
+                text: 'I have an amazing family',
+                point: 'Ron',
             },
             {
-                text: 'Someone who I can share my secrets with',
-                point: 'parrot',
+                text: 'I am insanely rich',
+                point: 'Draco',
+            },
+            {
+                text: 'I am the chosen one',
+                point: 'Harry',
+            },
+        ],
+    },
+    {
+        text: 'What is your favorite Harry Potter quote?',
+        options: [
+            {
+                text: 'I don\'t go looking for trouble, Trouble usually finds me.',
+                point: 'Harry',
+            },
+            {
+                text: 'It\'s Leviosa, not Leviosar!',
+                point: 'Hermione',
+            },
+            {
+                text: 'Why Spiders? Why couldn\'t it be "follow the butterflies"?',
+                point: 'Ron',
             },
             {
                 // inside a string, you have to escape quote marks with a \
-                text: 'Someone who doesn\'t have too many emotions',
-                point: 'turtle',
+                text: 'Scared, Potter?',
+                point: 'Draco',
             },
         ],
     },

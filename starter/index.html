@@ -7,12 +7,13 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="./site.css"/>
+    <link rel="shortcut icon" href="images/Hedwig.jpg" type="image/jpg">
 </head>
-<body>
+<body class="background" background="images/Background.jpg">
 
     <div id="quizContainer">
 
-        <h1>What kind of animal are you?</h1>
+        <h1>Which <em>Harry Potter</em> Character Are You?</h1>
 
         <button id="takeAgain" style="display: none; float: right;" onclick="window.location.reload()">Take Again</button>
 
@@ -20,7 +21,7 @@
 
             <p>Click <strong>Start Quiz</strong> to find out!</p>
 
-            <button onclick="startQuiz()">Start Quiz</button>
+            <button id="quizBtn" onclick="startQuiz()">Start Quiz</button>
 
         </div>
 
@@ -36,44 +37,44 @@
                 The results below are hidden by CSS when the page loads.
                 When the quiz is finished, JavaScript will make the correct result visible.
             -->
-            <div id="answer-dog" class="answer dog hide">
-                <h4>You are a dog!</h4>
+            <div id="answer-Harry" class="answer Harry hide">
+                <h4>You are Harry!</h4>
                 <p>
-                    <img src="images/dog.jpg" />
-                    Pros: active, friendly, fun
+                    <img src="images/Harry.jpg" />
+                    Pros: You are brave, talented, and loyal
                     <br>
-                    Cons: short attention span, really want to be liked, angry when hungry
+                    Cons: Can be stubborn and pig-headed
                     </ul>
                 </p>
             </div>
             
-            <div id="answer-cat" class="answer cat hide">
-                <h4>You are a cat!</h4>
+            <div id="answer-Hermione" class="answer Hermione hide">
+                <h4>You are Hermione!</h4>
                 <p>
-                    <img src="images/cat.jpg" />
-                    Pros: know how to get what you want, know how to make people feel good
+                    <img src="images/Hermione.jpg" />
+                    Pros: You are clever, dedicated, and honest
                     <br>
-                    Cons: easy for your ego to get hurt, tend to be a loner, sometimes would rather scheme than just communicate about what you need
+                    Cons: Can be a bit of a know-it-all
                 </p>
             </div>
             
-            <div id="answer-parrot" class="answer parrot hide">
-                <h4>You are a parrot!</h4>
+            <div id="answer-Ron" class="answer Ron hide">
+                <h4>You are Ron!</h4>
                 <p>
-                    <img src="images/parrot.jpg" />
-                    Pros: social, well-informed, great at fitting in
+                    <img src="images/Ron.jpg" />
+                    Pros: You are loyal, brave, dedicated to team work
                     <br>
-                    Cons: can be vain, sometimes speaks before thinking
+                    Cons: Can be vain, sometimes speaks before thinking
                 </p>
             </div>
             
-            <div id="answer-turtle" class="answer turtle hide">
-                <h4>You are a turtle!</h4>
+            <div id="answer-Draco" class="answer Draco hide">
+                <h4>You are Draco!</h4>
                 <p>
-                    <img src="images/turtle.jpg" />
-                    Pros: good listener, resilient, dedicated and can see things through
+                    <img src="images/Draco.png" />
+                    Pros: You are cunning, talented, and prepared
                     <br>
-                    Cons: slow to let people in, can be defensive
+                    Cons: Can be sneaky and dishonest
                 </p>
             </div>
         </div>
